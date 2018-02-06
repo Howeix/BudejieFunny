@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWADViewController">
+            <connections>
+                <outlet property="adContainView" destination="J9J-e1-i3j" id="So7-mm-dPR"/>
+                <outlet property="jumpBtn" destination="WOj-xN-JOa" id="986-tC-7XL"/>
+                <outlet property="launchImageView" destination="tJb-Cb-FKL" id="gAK-W0-WyS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJb-Cb-FKL" userLabel="Launch Image View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9J-e1-i3j" userLabel="广告占位视图">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOj-xN-JOa">
+                    <rect key="frame" x="324" y="25" width="65" height="34"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="fjC-bt-jtK"/>
+                        <constraint firstAttribute="height" constant="34" id="wi5-3V-Ygz"/>
+                    </constraints>
+                    <state key="normal" title="跳过 (3)">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickJump:" destination="-1" eventType="touchUpInside" id="UYH-5A-YhP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="J9J-e1-i3j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GAo-36-aMO"/>
+                <constraint firstAttribute="bottom" secondItem="tJb-Cb-FKL" secondAttribute="bottom" id="MUR-TU-etM"/>
+                <constraint firstItem="tJb-Cb-FKL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TW3-fs-sVx"/>
+                <constraint firstItem="tJb-Cb-FKL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="XnQ-UF-yOG"/>
+                <constraint firstAttribute="trailing" secondItem="tJb-Cb-FKL" secondAttribute="trailing" id="XwU-7b-a30"/>
+                <constraint firstItem="J9J-e1-i3j" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="arD-i2-gzu"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="J9J-e1-i3j" secondAttribute="bottom" id="nnW-Sf-xVf"/>
+                <constraint firstItem="WOj-xN-JOa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="oFY-cH-C96"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="J9J-e1-i3j" secondAttribute="trailing" id="rtf-Au-Sph"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="WOj-xN-JOa" secondAttribute="trailing" constant="25" id="yf6-1E-QsC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
