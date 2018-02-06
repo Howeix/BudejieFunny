@@ -221,7 +221,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
         self.headerRefreshing = NO;
     }
     
-    
+    NSLog(@"hey");
 }
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
