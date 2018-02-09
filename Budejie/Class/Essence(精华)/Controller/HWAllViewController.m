@@ -9,9 +9,22 @@
 #import "HWAllViewController.h"
 #import "HWTopic.h"
 #import "HWTopicCell.h"
+#import "HWTopicVideoView.h"
+#import "HWTopicPictureView.h"
+#import "HWTopicVoiceView.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
+
+
+typedef struct{
+    
+    int da_year;
+    int da_mon;
+    int da_day;
+    
+} date;
+
 
 @interface HWAllViewController ()
 
@@ -124,7 +137,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     para[@"a"] = @"list";
     para[@"c"] = @"data";
-    para[@"type"] = @"31";
+    para[@"type"] = @"41";
     para[@"Maxtime"] = self.maxtime;
     NSLog(@"maxtime - %@",self.maxtime);
     
@@ -169,7 +182,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     para[@"a"] = @"list";
     para[@"c"] = @"data";
-    para[@"type"] = @"31";
+    para[@"type"] = @"41";
 //    para[@"Maxtime"] = @"";
 
         [mgr GET:HWCommonURL parameters:para progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -221,7 +234,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
         self.headerRefreshing = NO;
     }
     
-    NSLog(@"hey");
+    
 }
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
@@ -250,6 +263,16 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     //文字的高度
     CGSize maxSize = CGSizeMake(HWScreenW - 2 * 10, MAXFLOAT);
     cellHeight += [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:maxSize].height + 10;
+    
+    if (item.top_cmt.count) {
+        //最热评论整体的高度
+        //最热评论标签高度 23
+        cellHeight += 33;
+        NSDictionary *cmtDict = item.top_cmt.firstObject;
+        NSString *cmtStr = [NSString stringWithFormat:@"%@: %@",cmtDict[@"user"][@"username"],cmtDict[@"content"]];
+        cellHeight += [cmtStr sizeWithFont:[UIFont systemFontOfSize:16] constrainedToSize:maxSize].height;
+    }
+    
     //工具条
     cellHeight += 40;
     
@@ -264,6 +287,18 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     
     HWTopic *item = _topics[indexPath.row];
     cell.topic = item;
+    //在cell上添加相应的view
+    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+//    if (item.type == 10) {
+//        HWTopicPictureView *picView = [HWTopicPictureView pictureView];
+//        [cell addSubview:picView];
+//    }else if (item.type == 31){
+//        HWTopicVoiceView *voiceView = [HWTopicVoiceView voiceView];
+//        [cell addSubview:voiceView];
+    if (item.type == 41){
+        HWTopicVideoView *videoView = [HWTopicVideoView videoView];
+        [cell addSubview:videoView];
+    }
     
     return cell;
 }

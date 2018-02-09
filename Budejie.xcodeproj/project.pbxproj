@@ -52,6 +52,12 @@
 		0ED6D82820085F4F00A4D49B /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6D82720085F4F00A4D49B /* UIView+Frame.m */; };
 		0ED6D82B2008807D00A4D49B /* HWTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6D82A2008807D00A4D49B /* HWTabBar.m */; };
 		0ED6D83420088DE000A4D49B /* HWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6D83320088DE000A4D49B /* HWConst.m */; };
+		0EDF6FF1202DA3F000712D90 /* HWTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF6FF0202DA3F000712D90 /* HWTopicVideoView.m */; };
+		0EDF6FF4202DA3FE00712D90 /* HWTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF6FF3202DA3FE00712D90 /* HWTopicVoiceView.m */; };
+		0EDF6FF7202DA40C00712D90 /* HWTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDF6FF6202DA40C00712D90 /* HWTopicPictureView.m */; };
+		0EDF6FF9202DA41C00712D90 /* HWTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF6FF8202DA41C00712D90 /* HWTopicVideoView.xib */; };
+		0EDF6FFB202DA43000712D90 /* HWTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF6FFA202DA43000712D90 /* HWTopicVoiceView.xib */; };
+		0EDF6FFD202DA43C00712D90 /* HWTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDF6FFC202DA43C00712D90 /* HWTopicPictureView.xib */; };
 		0EE52671201B280D00CDA994 /* HWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5266F201B280D00CDA994 /* HWWebViewController.m */; };
 		0EE52672201B280D00CDA994 /* HWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE52670201B280D00CDA994 /* HWWebViewController.xib */; };
 		4FCE56927EDC05A4D75C621A /* libPods-Budejie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E82AEFAD7F6D8357913353 /* libPods-Budejie.a */; };
@@ -160,6 +166,15 @@
 		0ED6D82A2008807D00A4D49B /* HWTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTabBar.m; sourceTree = "<group>"; };
 		0ED6D83220088DE000A4D49B /* HWConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWConst.h; sourceTree = "<group>"; };
 		0ED6D83320088DE000A4D49B /* HWConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWConst.m; sourceTree = "<group>"; };
+		0EDF6FEF202DA3F000712D90 /* HWTopicVideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWTopicVideoView.h; sourceTree = "<group>"; };
+		0EDF6FF0202DA3F000712D90 /* HWTopicVideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTopicVideoView.m; sourceTree = "<group>"; };
+		0EDF6FF2202DA3FE00712D90 /* HWTopicVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWTopicVoiceView.h; sourceTree = "<group>"; };
+		0EDF6FF3202DA3FE00712D90 /* HWTopicVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTopicVoiceView.m; sourceTree = "<group>"; };
+		0EDF6FF5202DA40C00712D90 /* HWTopicPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWTopicPictureView.h; sourceTree = "<group>"; };
+		0EDF6FF6202DA40C00712D90 /* HWTopicPictureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWTopicPictureView.m; sourceTree = "<group>"; };
+		0EDF6FF8202DA41C00712D90 /* HWTopicVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWTopicVideoView.xib; sourceTree = "<group>"; };
+		0EDF6FFA202DA43000712D90 /* HWTopicVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWTopicVoiceView.xib; sourceTree = "<group>"; };
+		0EDF6FFC202DA43C00712D90 /* HWTopicPictureView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWTopicPictureView.xib; sourceTree = "<group>"; };
 		0EE5266E201B280D00CDA994 /* HWWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWWebViewController.h; sourceTree = "<group>"; };
 		0EE5266F201B280D00CDA994 /* HWWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWWebViewController.m; sourceTree = "<group>"; };
 		0EE52670201B280D00CDA994 /* HWWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWWebViewController.xib; sourceTree = "<group>"; };
@@ -211,6 +226,15 @@
 				021A66382026CC6200905CA8 /* HWTopicCell.h */,
 				021A66392026CC6200905CA8 /* HWTopicCell.m */,
 				021A663A2026CC6200905CA8 /* HWTopicCell.xib */,
+				0EDF6FEF202DA3F000712D90 /* HWTopicVideoView.h */,
+				0EDF6FF0202DA3F000712D90 /* HWTopicVideoView.m */,
+				0EDF6FF8202DA41C00712D90 /* HWTopicVideoView.xib */,
+				0EDF6FF2202DA3FE00712D90 /* HWTopicVoiceView.h */,
+				0EDF6FF3202DA3FE00712D90 /* HWTopicVoiceView.m */,
+				0EDF6FFA202DA43000712D90 /* HWTopicVoiceView.xib */,
+				0EDF6FF5202DA40C00712D90 /* HWTopicPictureView.h */,
+				0EDF6FF6202DA40C00712D90 /* HWTopicPictureView.m */,
+				0EDF6FFC202DA43C00712D90 /* HWTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -746,7 +770,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EE52672201B280D00CDA994 /* HWWebViewController.xib in Resources */,
+				0EDF6FF9202DA41C00712D90 /* HWTopicVideoView.xib in Resources */,
 				02603BAE2014722300C58DA5 /* HWLoginRegisterView.xib in Resources */,
+				0EDF6FFB202DA43000712D90 /* HWTopicVoiceView.xib in Resources */,
 				0ECA71A1200CB8080092D6EE /* HWSubTagCell.xib in Resources */,
 				0208DE9220148F2D00C84A34 /* HWLoginRegisterViewController.xib in Resources */,
 				0208DE972014DAD100C84A34 /* HWCollectionViewCell.xib in Resources */,
@@ -755,6 +781,7 @@
 				02603BA420146A6600C58DA5 /* HWFriendTrendViewController.xib in Resources */,
 				0EABD06B20071D4F0077E566 /* Assets.xcassets in Resources */,
 				021A663C2026CC6200905CA8 /* HWTopicCell.xib in Resources */,
+				0EDF6FFD202DA43C00712D90 /* HWTopicPictureView.xib in Resources */,
 				0EABD06920071D4F0077E566 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,6 +865,7 @@
 				0283EA0A201DC0E500A8DFA8 /* HWWordViewController.m in Sources */,
 				0283EA01201DC0B000A8DFA8 /* HWPictureViewController.m in Sources */,
 				0208DE9A2014E40E00C84A34 /* HWSquareItem.m in Sources */,
+				0EDF6FF7202DA40C00712D90 /* HWTopicPictureView.m in Sources */,
 				021A663B2026CC6200905CA8 /* HWTopicCell.m in Sources */,
 				0ED6D83420088DE000A4D49B /* HWConst.m in Sources */,
 				025C8DF12007CDFA00532852 /* HWEssenceViewController.m in Sources */,
@@ -862,6 +890,8 @@
 				02603BAC2014721800C58DA5 /* HWLoginRegisterView.m in Sources */,
 				0EABD10220076B280077E566 /* HWADViewController.m in Sources */,
 				0ED6D82820085F4F00A4D49B /* UIView+Frame.m in Sources */,
+				0EDF6FF4202DA3FE00712D90 /* HWTopicVoiceView.m in Sources */,
+				0EDF6FF1202DA3F000712D90 /* HWTopicVideoView.m in Sources */,
 				025C8DF42007CE1400532852 /* HWFriendTrendViewController.m in Sources */,
 				025C8E062007CFE400532852 /* HWNavigationViewController.m in Sources */,
 				02970385201C863700B44FDD /* HWView.m in Sources */,
