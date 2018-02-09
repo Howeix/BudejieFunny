@@ -16,16 +16,6 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 
-
-typedef struct{
-    
-    int da_year;
-    int da_mon;
-    int da_day;
-    
-} date;
-
-
 @interface HWAllViewController ()
 
 //** headerRefreshing */
@@ -39,6 +29,8 @@ typedef struct{
 
 /* 当前最后一条帖子数据的描述信息,专门用来加载下一页数据 */
 @property(copy,nonatomic)NSString *maxtime;
+
+
 
 @end
 
@@ -264,6 +256,8 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     CGSize maxSize = CGSizeMake(HWScreenW - 2 * 10, MAXFLOAT);
     cellHeight += [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:maxSize].height + 10;
     
+#warning TODO the CELLHEIGHT:
+    //如果有最热评论就增加其高度
     if (item.top_cmt.count) {
         //最热评论整体的高度
         //最热评论标签高度 23
@@ -297,6 +291,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
 //        [cell addSubview:voiceView];
     if (item.type == 41){
         HWTopicVideoView *videoView = [HWTopicVideoView videoView];
+        videoView.frame = CGRectMake(10, 65, HWScreenW - 20, HWScreenW - 20);
         [cell addSubview:videoView];
     }
     
