@@ -10,7 +10,7 @@
 
 #import "HWADViewController.h"
 #import "HWTabBarController.h"
-
+#import <AFNetworking.h>
 @interface AppDelegate ()
 
 @end
@@ -19,6 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    [mgr startMonitoring];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     

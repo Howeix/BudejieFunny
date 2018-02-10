@@ -9,9 +9,6 @@
 #import "HWAllViewController.h"
 #import "HWTopic.h"
 #import "HWTopicCell.h"
-#import "HWTopicVideoView.h"
-#import "HWTopicPictureView.h"
-#import "HWTopicVoiceView.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
@@ -40,6 +37,9 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
 
 
 @implementation HWAllViewController
+
+
+
 
 - (void)viewDidLoad {
 
@@ -129,7 +129,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     para[@"a"] = @"list";
     para[@"c"] = @"data";
-    para[@"type"] = @"41";
+    para[@"type"] = @"31";
     para[@"Maxtime"] = self.maxtime;
     NSLog(@"maxtime - %@",self.maxtime);
     
@@ -174,7 +174,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     para[@"a"] = @"list";
     para[@"c"] = @"data";
-    para[@"type"] = @"41";
+    para[@"type"] = @"31";
 //    para[@"Maxtime"] = @"";
 
         [mgr GET:HWCommonURL parameters:para progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -249,29 +249,43 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     HWTopic *item = self.topics[indexPath.row];
     
-    CGFloat cellHeight = 0;
-    //文字的Y值
-    cellHeight += 55;
-    //文字的高度
-    CGSize maxSize = CGSizeMake(HWScreenW - 2 * 10, MAXFLOAT);
-    cellHeight += [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:maxSize].height + 10;
     
-#warning TODO the CELLHEIGHT:
-    //如果有最热评论就增加其高度
-    if (item.top_cmt.count) {
-        //最热评论整体的高度
-        //最热评论标签高度 23
-        cellHeight += 33;
-        NSDictionary *cmtDict = item.top_cmt.firstObject;
-        NSString *cmtStr = [NSString stringWithFormat:@"%@: %@",cmtDict[@"user"][@"username"],cmtDict[@"content"]];
-        cellHeight += [cmtStr sizeWithFont:[UIFont systemFontOfSize:16] constrainedToSize:maxSize].height;
-    }
+//    //文字的Y值
+//    cellHeight += 55;
+//    //文字的高度
+//    CGSize maxSize = CGSizeMake(HWScreenW - 2 * 10, MAXFLOAT);
+//    cellHeight += [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:maxSize].height + 10;
+//
+//#warning TODO the CELLHEIGHT:
+//    if (item.type != HWTopicTypeWord) {
+//        /*
+//        item.width      maxSize.width
+//        ----------- = ----------------
+//        item.height     maxSize.height
+//                            middleW * item.height
+//         maxSize.height = ------------------------
+//        */
+//        CGFloat middleW = maxSize.width;
+//        CGFloat middleH = item.height * middleW / item.width;
+//
+//        cellHeight += middleH + 10;
+
+
+//    //如果有最热评论就增加其高度
+//    if (item.top_cmt.count) {
+//        //最热评论整体的高度
+//        //最热评论标签高度 23
+//        cellHeight += 33;
+//        NSDictionary *cmtDict = item.top_cmt.firstObject;
+//        NSString *cmtStr = [NSString stringWithFormat:@"%@: %@",cmtDict[@"user"][@"username"],cmtDict[@"content"]];
+//        cellHeight += [cmtStr sizeWithFont:[UIFont systemFontOfSize:16] constrainedToSize:maxSize].height;
+//    }
+//
+//    //工具条
+//    cellHeight += 40;
+
     
-    //工具条
-    cellHeight += 40;
-    
-    
-    return cellHeight;
+    return item.cellHeight;
 }
 
 
@@ -281,19 +295,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     
     HWTopic *item = _topics[indexPath.row];
     cell.topic = item;
-    //在cell上添加相应的view
-    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
-//    if (item.type == 10) {
-//        HWTopicPictureView *picView = [HWTopicPictureView pictureView];
-//        [cell addSubview:picView];
-//    }else if (item.type == 31){
-//        HWTopicVoiceView *voiceView = [HWTopicVoiceView voiceView];
-//        [cell addSubview:voiceView];
-    if (item.type == 41){
-        HWTopicVideoView *videoView = [HWTopicVideoView videoView];
-        videoView.frame = CGRectMake(10, 65, HWScreenW - 20, HWScreenW - 20);
-        [cell addSubview:videoView];
-    }
+
     
     return cell;
 }
