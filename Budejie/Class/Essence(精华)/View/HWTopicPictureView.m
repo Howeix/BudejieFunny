@@ -8,10 +8,13 @@
 
 #import "HWTopicPictureView.h"
 #import <UIImageView+WebCache.h>
+#import <UIImage+GIF.h>
 #import "HWTopic.h"
 
 @interface HWTopicPictureView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *gif;
+@property (weak, nonatomic) IBOutlet UIButton *seeBigPictureButton;
 
 @end
 
@@ -36,7 +39,16 @@
     
     _topic = topic;
     
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:_topic.image1]];
+    
+    
+    if ([_topic.image1.pathExtension.lowercaseString isEqualToString:@"gif"]) {
+        self.gif.hidden = NO;
+        
+        
+        
+    }else{
+        self.gif.hidden = YES;
+    }
     
     
 }

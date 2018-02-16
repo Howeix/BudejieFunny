@@ -24,12 +24,33 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-bX-5O3">
                     <rect key="frame" x="0.0" y="0.0" width="355" height="214"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="75f-w0-UQn">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="UYJ-A3-d2h"/>
+                        <constraint firstAttribute="width" constant="31" id="l20-TB-E1a"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4C-is-Xr6">
+                    <rect key="frame" x="0.0" y="171" width="355" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="6Q1-lP-R0L"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="75f-w0-UQn" firstAttribute="top" secondItem="EDy-7P-TQk" secondAttribute="top" id="6y2-U4-MmH"/>
                 <constraint firstItem="Aqo-5u-kiw" firstAttribute="bottom" secondItem="LBb-bX-5O3" secondAttribute="bottom" id="7gX-Fk-wdo"/>
                 <constraint firstItem="xSb-zj-KFt" firstAttribute="top" secondItem="Aqo-5u-kiw" secondAttribute="top" constant="35" id="8sP-gN-XV1"/>
+                <constraint firstItem="u4C-is-Xr6" firstAttribute="leading" secondItem="Aqo-5u-kiw" secondAttribute="leading" id="AIa-Au-2dQ"/>
+                <constraint firstItem="u4C-is-Xr6" firstAttribute="trailing" secondItem="Aqo-5u-kiw" secondAttribute="trailing" id="D6w-e7-izw"/>
                 <constraint firstItem="Aqo-5u-kiw" firstAttribute="trailing" secondItem="xSb-zj-KFt" secondAttribute="trailing" id="E5g-0V-Ctt"/>
+                <constraint firstItem="u4C-is-Xr6" firstAttribute="bottom" secondItem="Aqo-5u-kiw" secondAttribute="bottom" id="QgC-XP-vtZ"/>
+                <constraint firstItem="75f-w0-UQn" firstAttribute="leading" secondItem="Aqo-5u-kiw" secondAttribute="leading" id="VXa-T6-g5H"/>
                 <constraint firstItem="LBb-bX-5O3" firstAttribute="top" secondItem="Aqo-5u-kiw" secondAttribute="top" id="XhF-Lq-mgw"/>
                 <constraint firstItem="LBb-bX-5O3" firstAttribute="leading" secondItem="Aqo-5u-kiw" secondAttribute="leading" id="ZJN-sa-ldb"/>
                 <constraint firstItem="Aqo-5u-kiw" firstAttribute="trailing" secondItem="LBb-bX-5O3" secondAttribute="trailing" id="Zt6-el-Ht2"/>
@@ -38,12 +59,17 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Aqo-5u-kiw"/>
             <connections>
+                <outlet property="gif" destination="75f-w0-UQn" id="ruA-Cz-B61"/>
                 <outlet property="imageView" destination="LBb-bX-5O3" id="wfv-B5-P3V"/>
+                <outlet property="seeBigPictureButton" destination="u4C-is-Xr6" id="zAI-BR-sOd"/>
             </connections>
-            <point key="canvasLocation" x="141" y="-74"/>
+            <point key="canvasLocation" x="140.5" y="-74"/>
         </view>
     </objects>
     <resources>
+        <image name="common-gif" width="31" height="31"/>
         <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
     </resources>
 </document>

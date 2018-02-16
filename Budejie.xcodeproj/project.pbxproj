@@ -23,6 +23,8 @@
 		025C8E002007CEB300532852 /* HWPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025C8DFF2007CEB300532852 /* HWPublishViewController.m */; };
 		025C8E062007CFE400532852 /* HWNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025C8E052007CFE400532852 /* HWNavigationViewController.m */; };
 		025C8E0C2007D18F00532852 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 025C8E0B2007D18F00532852 /* UIImage+Image.m */; };
+		02600A922037252D00C2DC87 /* UIImageView+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 02600A912037252D00C2DC87 /* UIImageView+Download.m */; };
+		02600A94203726FB00C2DC87 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02600A93203726FB00C2DC87 /* WebKit.framework */; };
 		02603BA22014690400C58DA5 /* HWMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02603BA12014690300C58DA5 /* HWMeViewController.storyboard */; };
 		02603BA420146A6600C58DA5 /* HWFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02603BA320146A6600C58DA5 /* HWFriendTrendViewController.xib */; };
 		02603BAC2014721800C58DA5 /* HWLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02603BAB2014721800C58DA5 /* HWLoginRegisterView.m */; };
@@ -110,6 +112,9 @@
 		025C8E052007CFE400532852 /* HWNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWNavigationViewController.m; sourceTree = "<group>"; };
 		025C8E0A2007D18F00532852 /* UIImage+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
 		025C8E0B2007D18F00532852 /* UIImage+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		02600A902037252D00C2DC87 /* UIImageView+Download.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Download.h"; sourceTree = "<group>"; };
+		02600A912037252D00C2DC87 /* UIImageView+Download.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Download.m"; sourceTree = "<group>"; };
+		02600A93203726FB00C2DC87 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		02603BA12014690300C58DA5 /* HWMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HWMeViewController.storyboard; sourceTree = "<group>"; };
 		02603BA320146A6600C58DA5 /* HWFriendTrendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HWFriendTrendViewController.xib; sourceTree = "<group>"; };
 		02603BAA2014721800C58DA5 /* HWLoginRegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWLoginRegisterView.h; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02600A94203726FB00C2DC87 /* WebKit.framework in Frameworks */,
 				4FCE56927EDC05A4D75C621A /* libPods-Budejie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +272,7 @@
 		0C05EE3079C0E1A71FFFAA3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02600A93203726FB00C2DC87 /* WebKit.framework */,
 				B6E82AEFAD7F6D8357913353 /* libPods-Budejie.a */,
 			);
 			name = Frameworks;
@@ -647,6 +654,8 @@
 				0ED6D82720085F4F00A4D49B /* UIView+Frame.m */,
 				027BC94F200B6CCE0069A663 /* UIBarButtonItem+NavItem.h */,
 				027BC950200B6CCE0069A663 /* UIBarButtonItem+NavItem.m */,
+				02600A902037252D00C2DC87 /* UIImageView+Download.h */,
+				02600A912037252D00C2DC87 /* UIImageView+Download.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -895,6 +904,7 @@
 				025C8DF42007CE1400532852 /* HWFriendTrendViewController.m in Sources */,
 				025C8E062007CFE400532852 /* HWNavigationViewController.m in Sources */,
 				02970385201C863700B44FDD /* HWView.m in Sources */,
+				02600A922037252D00C2DC87 /* UIImageView+Download.m in Sources */,
 				025C8DFA2007CE6800532852 /* HWMeViewController.m in Sources */,
 				0EE52671201B280D00CDA994 /* HWWebViewController.m in Sources */,
 				0283E9FB201D985100A8DFA8 /* HWTitleButton.m in Sources */,
