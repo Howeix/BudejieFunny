@@ -13,7 +13,7 @@
 #import "HWTopicVideoView.h"
 #import "HWTopicPictureView.h"
 #import "HWTopicVoiceView.h"
-#import <objc/runtime.h>
+
 @interface HWTopicCell()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -119,10 +119,12 @@
         self.topicPictureView.hidden = NO;
         self.topicVoiceView.hidden = YES;
         self.topicVideoView.hidden = YES;
+        self.topicPictureView.topic = topic;
     }else if (topic.type == HWTopicTypeVideo){ //视频
         self.topicPictureView.hidden = YES;
         self.topicVoiceView.hidden = YES;
         self.topicVideoView.hidden = NO;
+        self.topicVideoView.topic = topic;
     }else if (topic.type == HWTopicTypeVoice){ //声音
         self.topicPictureView.hidden = YES;
         self.topicVoiceView.hidden = NO;

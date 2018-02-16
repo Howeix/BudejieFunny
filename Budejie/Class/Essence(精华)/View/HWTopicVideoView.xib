@@ -11,13 +11,66 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="X9d-bD-FGp">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+        <view contentMode="scaleToFill" id="cBx-zt-CCI" customClass="HWTopicVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="214"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.73708519429999997" green="1" blue="0.48784821229999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="QZF-m9-n8T" userLabel="ImageBackground">
+                    <rect key="frame" x="0.0" y="35" width="355" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gvR-8v-HOe"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezD-C2-em4">
+                    <rect key="frame" x="0.0" y="0.0" width="355" height="214"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkx-Rk-dGx">
+                    <rect key="frame" x="142" y="71.5" width="71" height="71"/>
+                    <state key="normal" image="video-play"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4343播放" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKa-nD-eJh" userLabel="Playcount Label">
+                    <rect key="frame" x="278.5" y="0.0" width="76.5" height="21"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMV-mo-bGJ" userLabel="videotime Label">
+                    <rect key="frame" x="309" y="193" width="46" height="21"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QZF-m9-n8T" firstAttribute="leading" secondItem="0VT-Af-WZ4" secondAttribute="leading" id="5Vc-lM-9WC"/>
+                <constraint firstItem="0VT-Af-WZ4" firstAttribute="bottom" secondItem="ezD-C2-em4" secondAttribute="bottom" id="75c-bK-XIo"/>
+                <constraint firstItem="fKa-nD-eJh" firstAttribute="top" secondItem="0VT-Af-WZ4" secondAttribute="top" id="874-sY-cuY"/>
+                <constraint firstItem="QZF-m9-n8T" firstAttribute="top" secondItem="0VT-Af-WZ4" secondAttribute="top" constant="35" id="9QZ-6b-BgM"/>
+                <constraint firstItem="kMV-mo-bGJ" firstAttribute="trailing" secondItem="0VT-Af-WZ4" secondAttribute="trailing" id="Caa-GR-e66"/>
+                <constraint firstItem="0VT-Af-WZ4" firstAttribute="trailing" secondItem="ezD-C2-em4" secondAttribute="trailing" id="R0M-Qe-Jii"/>
+                <constraint firstItem="0VT-Af-WZ4" firstAttribute="trailing" secondItem="QZF-m9-n8T" secondAttribute="trailing" id="V5d-5r-YFV"/>
+                <constraint firstItem="ezD-C2-em4" firstAttribute="top" secondItem="0VT-Af-WZ4" secondAttribute="top" id="Wux-ut-9tT"/>
+                <constraint firstItem="Nkx-Rk-dGx" firstAttribute="centerY" secondItem="cBx-zt-CCI" secondAttribute="centerY" id="dmh-SN-9Y9"/>
+                <constraint firstItem="Nkx-Rk-dGx" firstAttribute="centerX" secondItem="cBx-zt-CCI" secondAttribute="centerX" id="gQ5-tq-ghR"/>
+                <constraint firstItem="kMV-mo-bGJ" firstAttribute="bottom" secondItem="0VT-Af-WZ4" secondAttribute="bottom" id="ujC-CN-9Lc"/>
+                <constraint firstItem="ezD-C2-em4" firstAttribute="leading" secondItem="0VT-Af-WZ4" secondAttribute="leading" id="umf-iR-4dC"/>
+                <constraint firstItem="fKa-nD-eJh" firstAttribute="trailing" secondItem="0VT-Af-WZ4" secondAttribute="trailing" id="w9Y-Ut-EO5"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="McV-6n-IiQ"/>
-            <point key="canvasLocation" x="88" y="-17"/>
+            <viewLayoutGuide key="safeArea" id="0VT-Af-WZ4"/>
+            <connections>
+                <outlet property="imageView" destination="ezD-C2-em4" id="E9A-zb-MYh"/>
+                <outlet property="playcountLabel" destination="fKa-nD-eJh" id="mdq-H8-NwD"/>
+                <outlet property="videotimeLabel" destination="kMV-mo-bGJ" id="Xvx-u7-pQ7"/>
+            </connections>
+            <point key="canvasLocation" x="289" y="-77"/>
         </view>
     </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
 </document>

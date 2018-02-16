@@ -7,11 +7,39 @@
 //
 
 #import "HWTopicPictureView.h"
+#import <UIImageView+WebCache.h>
+#import "HWTopic.h"
+
+@interface HWTopicPictureView()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@end
+
+
 
 @implementation HWTopicPictureView
 
+
+
 +(instancetype)pictureView{
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil][0];
+
 }
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    self.autoresizingMask = UIViewAutoresizingNone;
+    
+}
+
+-(void)setTopic:(HWTopic *)topic{
+    
+    _topic = topic;
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:_topic.image1]];
+    
+    
+}
+
 
 @end

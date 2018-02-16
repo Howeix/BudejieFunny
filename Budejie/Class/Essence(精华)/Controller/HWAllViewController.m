@@ -52,7 +52,8 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     [self setupFooterRefresh];
     //添加广告控件为headerView
     [self setupADViewInHeader];
-    
+    //取消talbeView每个cell之间的分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([HWTopicCell class]) bundle:nil];
@@ -129,7 +130,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     para[@"a"] = @"list";
     para[@"c"] = @"data";
-    para[@"type"] = @"31";
+    para[@"type"] = @"1";
     para[@"Maxtime"] = self.maxtime;
     NSLog(@"maxtime - %@",self.maxtime);
     
@@ -174,7 +175,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     para[@"a"] = @"list";
     para[@"c"] = @"data";
-    para[@"type"] = @"31";
+    para[@"type"] = @"1";
 //    para[@"Maxtime"] = @"";
 
         [mgr GET:HWCommonURL parameters:para progress:^(NSProgress * _Nonnull downloadProgress) {

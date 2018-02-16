@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HWTopic;
 @interface HWTopicVideoView : UIView
+/* 模型 */
+@property(strong,nonatomic)HWTopic *topic;
 +(instancetype)videoView;
 @end
