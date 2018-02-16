@@ -170,7 +170,11 @@
     }completion:^(BOOL finished) {
         [self addViewIntoScrollView:titleButton.tag];
     }];
-    NSLog(@"%f",self.scrollView.contentSize.width);
+    
+    
+    
+    
+    
 }
 
 

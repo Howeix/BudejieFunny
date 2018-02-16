@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HWTopic;
 @interface HWVideoViewController : UITableViewController
+/* 模型 */
+@property(strong,nonatomic)HWTopic *topic;
+/* 模型数组 */
+@property(strong,nonatomic)NSMutableArray <HWTopic *>*topics;
 
 @end

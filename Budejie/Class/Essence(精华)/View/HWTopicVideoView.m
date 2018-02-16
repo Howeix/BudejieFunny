@@ -7,11 +7,9 @@
 //
 
 #import "HWTopicVideoView.h"
-
-
 #import "HWTopic.h"
 #import <UIImageView+WebCache.h>
-#import <AFNetworking.h>
+//#import <AFNetworking.h>
 @interface HWTopicVideoView()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

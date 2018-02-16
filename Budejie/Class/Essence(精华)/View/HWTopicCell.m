@@ -35,7 +35,7 @@
 @end
 
 @implementation HWTopicCell
-
+//中间控件懒加载
 -(HWTopicVideoView *)topicVideoView{
     if (!_topicVideoView) {
         _topicVideoView = [HWTopicVideoView videoView];
@@ -176,8 +176,6 @@
         [self.dingButton setTitle:@"顶" forState:UIControlStateNormal];
     }
     [self.caiButton setTitle:[NSString stringWithFormat:@"%zd",topic.cai] forState:UIControlStateNormal];
-    
-    
 }
 */
 
