@@ -85,6 +85,8 @@ typedef NS_ENUM(NSUInteger,HWTopicType){
 
 /* 额外增加的属性（并非服务器返回的属性，仅仅是为了提高开发效率） */
 /** 根据当前模型计算出来的cell高度 */
+/* bigPic */
+@property(assign,nonatomic,getter=isBigPicture)BOOL bigPicture;
 @property (nonatomic, assign) CGFloat cellHeight;
 /** 中间内容的frame */
 @property (nonatomic, assign) CGRect middleFrame;
