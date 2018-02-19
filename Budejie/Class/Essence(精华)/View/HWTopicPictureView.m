@@ -50,12 +50,27 @@
 //        self.gif.hidden = YES;
 //    }
 //    self.seeBigPictureButton.hidden =
-//    _topic.cellHeight;
+    _topic.cellHeight;
     //点击查看大图
     if (_topic.isBigPicture) {
         self.seeBigPictureButton.hidden = NO;
         self.imageView.contentMode = UIViewContentModeTop;
         self.imageView.clipsToBounds = YES;
+        
+        //处理超长图片
+        if (self.imageView.image) {
+            CGFloat imageW = topic.middleFrame.size.width;
+            CGFloat imageH = imageW * topic.height /topic.width;
+            //开启上下文
+            UIGraphicsBeginImageContext(CGSizeMake(imageW, imageH));
+            //绘制图片到上下文中
+            [self.imageView.image drawInRect:CGRectMake(0, 0, imageW, imageH)];
+            self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+            //关闭上下文
+            UIGraphicsEndPDFContext();
+            
+        }
+        
     }else{
         self.seeBigPictureButton.hidden = YES;
         self.imageView.contentMode = UIViewContentModeScaleToFill;
