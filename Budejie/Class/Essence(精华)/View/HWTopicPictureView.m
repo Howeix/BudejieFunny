@@ -41,6 +41,7 @@
     
     self.gif.hidden = ![_topic.image1.pathExtension.lowercaseString isEqualToString:@"gif"];
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:_topic.image1]];
+    _topic.cellHeight;
 //    if ([_topic.image1.pathExtension.lowercaseString isEqualToString:@"gif"]) {
 //        self.gif.hidden = NO;
 //
@@ -50,13 +51,12 @@
 //        self.gif.hidden = YES;
 //    }
 //    self.seeBigPictureButton.hidden =
-    _topic.cellHeight;
+    
     //点击查看大图
     if (_topic.isBigPicture) {
         self.seeBigPictureButton.hidden = NO;
         self.imageView.contentMode = UIViewContentModeTop;
         self.imageView.clipsToBounds = YES;
-        
         //处理超长图片
         if (self.imageView.image) {
             CGFloat imageW = topic.middleFrame.size.width;
@@ -68,7 +68,6 @@
             self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
             //关闭上下文
             UIGraphicsEndPDFContext();
-            
         }
         
     }else{

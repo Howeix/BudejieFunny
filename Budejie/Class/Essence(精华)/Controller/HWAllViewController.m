@@ -12,6 +12,7 @@
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
+#import <SDImageCache.h>
 
 @interface HWAllViewController ()
 
@@ -206,6 +207,11 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
 
 
 #pragma mark - scrollViewDelegate
+//-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+//    //清除超过屏幕的内容(清除内存缓存)
+//    [[SDImageCache sharedImageCache] clearMemory];
+//}
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     //如果下拉刷新正在刷新就返回
     
@@ -226,9 +232,11 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
         _headerLabel.text = @"下拉可以刷新";
         self.headerRefreshing = NO;
     }
-    
+
     
 }
+
+
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     //当下啦然后松开手指之后来到这里
@@ -239,6 +247,7 @@ static NSString * const HWTopicCellID = @"HWTopicCellID";
         self.tableView.contentInset = UIEdgeInsetsMake(85, 0, 0, 0);
         [self loadNewData];
     }
+    
 }
 
 #pragma mark - TableViewDataSource
