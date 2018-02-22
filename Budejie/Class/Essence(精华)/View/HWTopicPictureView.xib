@@ -31,7 +31,7 @@
                         <constraint firstAttribute="width" constant="31" id="l20-TB-E1a"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4C-is-Xr6">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4C-is-Xr6">
                     <rect key="frame" x="0.0" y="171" width="355" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="6Q1-lP-R0L"/>

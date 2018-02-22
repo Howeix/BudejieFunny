@@ -8,6 +8,7 @@
 
 #import "HWTopicVideoView.h"
 #import "HWTopic.h"
+#import "HWSeeBigPictureViewController.h"
 #import <UIImageView+WebCache.h>
 //#import <AFNetworking.h>
 @interface HWTopicVideoView()
@@ -44,6 +45,17 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)]];
+    self.imageView.userInteractionEnabled = YES;
+    
+}
+
+-(void)seeBigPicture{
+    HWSeeBigPictureViewController *vc = [[HWSeeBigPictureViewController alloc] init];
+    //    [UIApplication sharedApplication].keyWindow.rootViewController present...
+    vc.topic = _topic;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
     
 }
 
